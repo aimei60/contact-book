@@ -27,6 +27,27 @@ cur = connection.cursor()
     ''')
 """
 
+user = input("Enter the action for the contact book: ADD CONTACT, VIEW CONTACT, UPDATE CONTACT, DELETE CONTACT: ")
 
-connection.commit()
+def add_contact():
+    name = input("Enter Name: ")
+    phone = input("Enter Phone Number: ")
+    address = input("Enter Address: ")
+    email_address = input("Enter Email Address: ")
+    
+    cur.execute('INSERT INTO contactbook (Name, Phone_Number, Address, Email_Address) VALUES (?, ?, ?, ?)', (name, phone, address, email_address))
+    
+    connection.commit()
+    print("Contact added successfully!")
+    
+
+def view_contact():
+    pass
+
+def delete_contact():
+    pass
+
+def update_contact():
+    pass
+
 connection.close()
