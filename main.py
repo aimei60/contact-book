@@ -126,5 +126,3 @@ if __name__ == "__main__":
     contactbook()
 
 connection.close()
-
-
